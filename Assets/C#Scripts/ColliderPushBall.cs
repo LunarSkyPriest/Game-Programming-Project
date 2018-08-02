@@ -10,6 +10,9 @@ public class ColliderPushBall : MonoBehaviour
 
     public GameObject explosion;
 
+    //variable to check if the ball gets destroyed
+    public static bool ballDestroyed = false;
+
 
     // Use this for initialization
     void Start()
@@ -30,6 +33,7 @@ public class ColliderPushBall : MonoBehaviour
 
         if (coll.gameObject.tag == "Player")
         {
+            
             if(Random.Range(0, 2) == 1)
             {
                 vel.x = rb2d.velocity.x - 4;
@@ -55,6 +59,7 @@ public class ColliderPushBall : MonoBehaviour
         if (coll.gameObject.tag == "Ground")
         {
             Destroy(gameObject);
+            ballDestroyed = true;
         }
     }
 

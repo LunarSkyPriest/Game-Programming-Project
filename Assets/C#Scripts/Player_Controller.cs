@@ -19,11 +19,10 @@ public class Player_Controller : MonoBehaviour
     public float panSpeed = 20f;
 
 
-
     // Use this for initialization
     void Start()
     {
-
+        
     }
 
     //Checked every second or so
